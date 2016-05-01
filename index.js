@@ -2,5 +2,11 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-aframe'
+  name: 'ember-aframe',
+
+  included: function(app) {
+    this._super.included(app);
+
+    app.import('vendor/aframe.js');
+  }
 };
